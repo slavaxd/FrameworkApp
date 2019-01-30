@@ -13,6 +13,7 @@ export default class LoginPage extends Component {
                 <LoginForm />
             </View>
        </View>
+       
     )
   }
 }
