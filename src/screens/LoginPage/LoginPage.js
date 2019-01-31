@@ -51,7 +51,7 @@ export default class LoginPage extends Component {
         <React.Fragment>
             <View style={styles.container}>
                 <ImageBackground 
-                    source={require('../assets/images/login.png')} 
+                    source={require('../../../assets/login.png')} 
                     style={{ width: '100%', height: '100%', flex: 1 }}
                 >
                     <LoginForm />
@@ -63,10 +63,10 @@ export default class LoginPage extends Component {
                     onPress={this.onButtonPress}
                     activeOpacity={1}>
                     <View style={{alignSelf: 'flex-start'}}>
-                        <Image 
+                        {/* <Image 
                             source={require('../assets/images/facebook.png')} 
                             style={{ width: 30, height: 30, }}
-                        ></Image>
+                        ></Image> */}
                     </View>
                     <Text  style={styles.buttonTextAuth}>Увійти через Facebook</Text>
                 </TouchableOpacity>
@@ -74,10 +74,10 @@ export default class LoginPage extends Component {
                     style={[styles.buttonAuth, styles.buttonGoogle]}
                     onPress={this.onButtonPress}
                     activeOpacity={1}>
-                    <Image 
+                    {/* <Image 
                         source={require('../assets/images/google.png')} 
                         style={{ width: 30, height: 30,  }}
-                    ></Image>
+                    ></Image> */}
                     <Text  style={styles.buttonTextAuth}>Увійти через Google</Text>
                 </TouchableOpacity>  
                 <TouchableOpacity 

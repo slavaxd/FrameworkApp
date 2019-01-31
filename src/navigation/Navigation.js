@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Text, View, Image } from 'react-native'
-import { Router, Stack, Scene, Modal, Tabs } from 'react-native-router-flux'
+import { Router, Stack, Scene, Modal, Tabs } from 'react-native-router-flux';
 
-import { RootScene, Home, Register, SecondTab } from '../screens'
+import LoginPage from '../screens/LoginPage/LoginPage'
 // import { Modal1, Modal2 } from '~/components/modals'
 
 const TabIcon = ({ focused, title }) => {
@@ -11,7 +11,7 @@ const TabIcon = ({ focused, title }) => {
       return (
         <View style={{ borderRadius: 25, position: "absolute", justifyContent: "center", alignItems: "center", width: 50, height: 50, bottom: 15, backgroundColor: "rgb(35, 123, 160)" }}><Text style={{ bottom: 3, left: 1, color: "#fff", fontSize: 40 }}>+</Text></View>
       );
-    case 'Карта':
+    case 'Вхід':
       return <View style={{ alignItems: "center" }}>
         <Image style={{ width: 20, height: 20, marginBottom: 5 }} source={require('./icons/cityIcnActive.png')} />
         <Text style={[{ fontSize: 12 }, focused ? { color: "rgb(35, 123, 160)" } : { color: "rgb(144, 147, 151)" }]}>My city</Text>
@@ -40,11 +40,11 @@ export default class Navigation extends Component {
       <Router>
         <Scene key="root" hideNavBar>
           <Tabs showLabel={false} tabBarStyle={{ height: 60 }}>
-            <Scene key="first" title="Карта" icon={TabIcon} hideNavBar>
-              <Scene key="rootScene" component={RootScene} title="RootScene" />
-              <Scene key="home" component={Home} title="Home" />
+            <Scene key="first" title="Вхід" icon={TabIcon} hideNavBar>
+              <Scene key="Вхід" component={LoginPage} title="Вхід" />
+              {/* <Scene key="home" component={Home} title="Home" /> */}
             </Scene>
-            <Scene key="secondary" title="favourite" icon={TabIcon}>
+            {/* <Scene key="secondary" title="favourite" icon={TabIcon}>
               <Scene key="second_tab" component={SecondTab} title="SecondTab" />
             </Scene>
             <Scene key="third" title="add" icon={TabIcon}>
@@ -55,7 +55,7 @@ export default class Navigation extends Component {
             </Scene>
             <Scene key="fiveth" title="profile" icon={TabIcon}>
               <Scene key="second_tab" component={SecondTab} title="SecondTab" />
-            </Scene>
+            </Scene> */}
           </Tabs>
         </Scene>
       </Router>
