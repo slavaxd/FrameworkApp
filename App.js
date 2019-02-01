@@ -8,10 +8,10 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
-        <Tabs key="root">
-          <Scene key="login" component={LoginPage} title="Login"/>
-          <Scene key="MenuPage" component={MenuPage} title="MenuPage"/>
-           <Scene key="Cart" component={Cart} title="Cart"/>
+        <Tabs key="root" >
+          <Scene key="login" component={LoginPage} title="Login" hideNavBar/>
+          <Scene key="MenuPage" component={MenuPage} title="MenuPage" hideNavBar/>
+           <Scene key="Cart" component={Cart} title="Cart" hideNavBar/>
         </Tabs>
       </Router>
     );

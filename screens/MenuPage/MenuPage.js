@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
 import MenuList from '../MenuList/MenuList';
 //import MenuItem from '../MenuItem/MenuItem';
+import firebase from '../../Firebase'
 
 export default class MenuPage extends Component {
   render() {
     return (
       <View style={styles.MenuPageContainer}>
-        <Image style={styles.img} source={require('../../assets/Fon.png')} />
+        <Image style={styles.img} source={require('../../assets/menuPage.png')} />
         <ScrollView>
           <View style={styles.MenuPageHeader}>
-            <Text style={styles.MenuPageTitle} >Меню кальянів</Text>
+            <TouchableOpacity>
+              <Text style={styles.MenuPageTitle} onPress={this.registerEmail}>Напої</Text>
+            </TouchableOpacity>
+
             <Text style={styles.MenuPageText1}>10 видів</Text>
           </View>
           <MenuList />
@@ -28,7 +32,7 @@ export default class MenuPage extends Component {
 const styles = StyleSheet.create({
   MenuPageContainer: {
     flex: 1,
-    backgroundColor: '#f9fafb'
+    backgroundColor: 'white'
   },
   MenuPageHeader: {
     flexDirection: "row",
@@ -36,6 +40,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-end"
   },
   MenuPageTitle: {
+    color: "#585754",
     fontSize: 28,
     fontWeight: "700",
     paddingLeft: 30,
