@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     },
     buttonFacebook:{
         backgroundColor: "#4E668E",
+        marginBottom: -20
     },
     buttonGoogle:{
         backgroundColor: "#E26358"
