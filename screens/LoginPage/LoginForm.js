@@ -47,12 +47,12 @@ export default class LoginForm extends Component {
             autoCorrect={false} 
             keyboardType='email-address' 
             returnKeyType="next" 
-            placeholder='Логін' 
+            placeholder='email' 
             placeholderTextColor='rgba(100,100,100,0.75)'/>
         <TextInput style = {styles.input}   
             returnKeyType="go" 
             ref={(input)=> this.passwordInput = input} 
-            placeholder='Пароль' 
+            placeholder='пароль' 
             placeholderTextColor='rgba(100,100,100,0.75)' 
             secureTextEntry/>
         <TouchableOpacity 
