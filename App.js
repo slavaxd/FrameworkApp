@@ -17,7 +17,7 @@ export default class App extends React.Component {
           <Scene key="Map" component={Map} title="Map"/>
           <Scene key="MenuPage" component={MenuPage} title="MenuPage"/>
           <Scene key="Cart" component={Cart} title="Cart"/>
-        </Tabs>
+      </Tabs>
       </Router>
     );
   }
