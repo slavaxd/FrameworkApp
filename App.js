@@ -4,15 +4,20 @@ import { Router, Stack, Scene, Tabs } from 'react-native-router-flux'
 import LoginPage from './screens/LoginPage/LoginPage'
 import MenuPage from './screens/MenuPage/MenuPage'
 import Cart from './screens/Cart/Cart'
+import Map from './screens/Map/Map'
+import Registration from './screens/Registration/Registration'
+
 export default class App extends React.Component {
   render() {
     return (
       <Router>
-        <Tabs key="root" >
-          <Scene key="login" component={LoginPage} title="Login" hideNavBar/>
-          <Scene key="MenuPage" component={MenuPage} title="MenuPage" hideNavBar/>
-           <Scene key="Cart" component={Cart} title="Cart" hideNavBar/>
-        </Tabs>
+        <Tabs key="root">
+          <Scene key="Registration" component={Registration} title="Registration"/>
+          <Scene key="login" component={LoginPage} title="Login"/>
+          <Scene key="Map" component={Map} title="Map"/>
+          <Scene key="MenuPage" component={MenuPage} title="MenuPage"/>
+          <Scene key="Cart" component={Cart} title="Cart"/>
+      </Tabs>
       </Router>
     );
   }
